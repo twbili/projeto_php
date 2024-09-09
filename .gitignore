@@ -11,3 +11,12 @@
 
 ###> PHP storm
 .idea/
+.idea/*
+.DS_Store/
+.DS_Store/*
+public/.DS_Store/
+public/.DS_Store/*
+.env.local
+public/info.php
+public/mypdo.php
+public/mysqli.php
