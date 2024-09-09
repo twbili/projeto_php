@@ -3164,7 +3164,7 @@ textarea.form-control-lg {
 }
 
 .btn-success {
-  --cui-btn-color: #080a0c;
+  --cui-btn-color: #FFFFFF ;
   --cui-btn-bg: #1b9e3e;
   --cui-btn-border-color: #1b9e3e;
   --cui-btn-hover-color: #080a0c;
@@ -3553,8 +3553,12 @@ textarea.form-control-lg {
   --cui-btn-disabled-bg: #6b7785;
   --cui-btn-disabled-border-color: #6b7785;
 }
+[data-coreui-theme=dark] .icteste {
+  fill:#FFFFFF;
+
+
 [data-coreui-theme=dark] .btn-success {
-  --cui-btn-color: #080a0c;
+  --cui-btn-color: #FFFFFF;
   --cui-btn-bg: #249542;
   --cui-btn-border-color: #249542;
   --cui-btn-hover-color: #080a0c;
