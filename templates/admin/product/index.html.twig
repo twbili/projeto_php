@@ -30,11 +30,15 @@
             });
         });
     </script>
-
+    <script>
+    function ativarModoEscuro() {
+    document.documentElement.classList.add('dark');
+    }
+</script>
 {% endblock %}
 
 {% block body %}
-    <h1>Product index</h1>
+    <h1>Lista de produtos</h1>
 
 
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css" />
