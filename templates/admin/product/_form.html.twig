@@ -1,4 +1,15 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+
+<button class="btn btn-primary mt-3 mb-3">{{ button_label|default('Save') }}</button>
+<br>
+<label for={{ form.name.vars.id }} class="form-label mt-3 ">Nome </label>
+{{ form_widget(form.name,{'attr':{'class':'form-control'}}) }}
+<label for={{ form.description.vars.id }} class="form-label mt-3 ">Descrição </label>
+{{ form_widget(form.description, {'attr': {'class': 'form-control', 'rows': 5}}) }}
+<label for={{ form.Price.vars.id }} class="form-label mt-3 ">Preço </label>
+{{ form_widget(form.Price,{'attr':{'class':'form-control'}}) }}
+<label for={{ form.QTD.vars.id }} class="form-label mt-3 ">Quantidade </label>
+{{ form_widget(form.QTD,{'attr':{'class':'form-control'}}) }}
+
+
 {{ form_end(form) }}

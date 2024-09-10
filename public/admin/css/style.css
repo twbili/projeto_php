@@ -3554,8 +3554,8 @@ textarea.form-control-lg {
   --cui-btn-disabled-border-color: #6b7785;
 }
 [data-coreui-theme=dark] .icteste {
-  fill:#FFFFFF;
-
+  fill: #FFFFFF;
+}
 
 [data-coreui-theme=dark] .btn-success {
   --cui-btn-color: #FFFFFF;
@@ -3574,7 +3574,7 @@ textarea.form-control-lg {
   --cui-btn-disabled-border-color: #249542;
 }
 [data-coreui-theme=dark] .btn-danger {
-  --cui-btn-color: #080a0c;
+  --cui-btn-color: #ffffff;
   --cui-btn-bg: #db5d5d;
   --cui-btn-border-color: #db5d5d;
   --cui-btn-hover-color: #080a0c;
