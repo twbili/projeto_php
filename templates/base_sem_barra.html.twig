@@ -1,0 +1,69 @@
+<html lang="en" data-coreui-theme="light">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>{% block title %}Bem vindo!{% endblock %}</title>
+
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="/admin/vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="/admin/css/vendors/simplebar.css">
+    <!-- Main styles for this application-->
+    <link href="/admin/css/style.css" rel="stylesheet">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link href="/admin/css/examples.css" rel="stylesheet">
+    <script src="/admin/js/config.js"></script>
+    <script src="/admin/js/color-modes.js"></script>
+    <link href="/admin/vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% block javascripts %}
+        <script>
+            function ativarModoEscuro() {
+                document.documentElement.classList.add('dark');
+            }
+        </script>
+
+    {% endblock %}
+</head>
+<body>
+
+<div class="wrapper d-flex flex-column min-vh-100">
+
+    <div class="body flex-grow-1">
+        <div class="container-lg px-4">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+    <footer class="footer px-4">
+        <div>Teste</div>
+        <div> Teste2</div>
+    </footer>
+</div>
+<!-- CoreUI and necessary plugins-->
+<script src="/admin/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+<script src="/admin/vendors/simplebar/js/simplebar.min.js"></script>
+<script>
+    const header = document.querySelector('header.header');
+
+    document.addEventListener('scroll', () => {
+        if (header) {
+            header.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
+        }
+    });
+</script>
+<!-- Plugins and scripts required by this view-->
+<script src="/admin/vendors/chart.js/js/chart.umd.js"></script>
+<script src="/admin/vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+<script src="/admin/vendors/@coreui/utils/js/index.js"></script>
+<script src="/admin/js/main.js"></script>
+<script>
+</script>
+
+
+</body>
+</html>
