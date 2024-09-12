@@ -19,9 +19,11 @@
     <script src="/admin/js/color-modes.js"></script>
     <link href="/admin/vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
     {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
     {% endblock %}
 
     {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
         <script>
             function ativarModoEscuro() {
                 document.documentElement.classList.add('dark');

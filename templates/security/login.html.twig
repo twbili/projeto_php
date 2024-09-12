@@ -3,6 +3,8 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
+
+
     <div class="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
         <div class="container">
             <div class="row justify-content-center">
@@ -54,9 +56,26 @@
                                 <div>
                                     <h2>Colocar algo aqui</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <button class="btn btn-lg btn-primary" type="button">
-                                        Button
+                                    <button class="btn btn-lg btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        Modal
                                     </button>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Título do Modal</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Conteúdo do Modal.
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
