@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Image{% endblock %}
+
+{% block body %}
+    <h1>Editar Imagem  </h1>
+
+    {{ include('admin/image/_form.html.twig', {'button_label': 'Update'}) }}
+
+    {{ include('admin/image/_delete_form.html.twig') }}
+    <div class="row text-end">
+        <div class="col text-end">
+            <a class="btn btn-primary float-start me-3 mb-5 text-end" href="{{ path('app_admin_image_index') }}">Retornar</a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{{ form_start(form) }}
+
+<button class="btn btn-primary mt-3 mb-3">{{ button_label|default('Save') }}</button>
+<br>
+<div class="row">
+    <div class = "col col-6">
+        <label for={{ form.name.vars.id }} class="form-label mt-3 ">Nome </label>
+        {{ form_widget(form.name,{'attr':{'class':'form-control'}}) }}
+    </div>
+
+</div>
+
+{{ form_end(form) }}

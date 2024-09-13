@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Image{% endblock %}
+
+{% block body %}
+    <h1>Create new Image</h1>
+
+    {{ include('admin/image/_form.html.twig') }}
+    <div class="text-end">
+        <a class="btn btn-primary float-start me-3 mb-5" href="{{ path('app_admin_image_index') }}">Retornar</a>
+    </div>
+{% endblock %}
