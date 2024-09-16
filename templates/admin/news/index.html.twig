@@ -33,11 +33,19 @@
             <tr>
                 <td>{{ newsItem.id }}</td>
                 <td>{{ newsItem.category }}</td>
-                <td>{{ newsItem.status }}</td>
-                <td>{{ newsItem.highlighted }}</td>
+                {% if newsItem.status == 1 %}
+                    <td><span class="badge text-bg-success">Ativo</span></td>
+                {% else %}
+                <td> <span class="badge text-bg-danger">Desativado</span></td>
+                {% endif %}
+                {% if newsItem.highlighted == 1 %}
+                    <td><span class="badge text-bg-success">Ativo</span></td>
+                {% else %}
+                    <td> <span class="badge text-bg-danger">Desativado</span></td>
+                {% endif %}
                 <td>{{ newsItem.title }}</td>
                 <td>{{ newsItem.shortDescription }}</td>
-                <td>{{ newsItem.youtueVideoCode }}</td>
+                <td><a href="{{ newsItem.youtueVideoCode }}" target="_blank" >{{ newsItem.youtueVideoCode }}<a/></td>
                 <td>{{ newsItem.fullDesxription }}</td>
                 <td>{% if newsItem.imageFile is not empty %}
                         <img class="mt-3" src="{{ vich_uploader_asset(newsItem,'imageFile') }}" width="150">
