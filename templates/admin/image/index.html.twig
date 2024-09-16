@@ -62,7 +62,9 @@
             <tr>
                 <td>{{ image.id }}</td>
                 <td>{{ image.name }}</td>
-                <td>{{ image.image }}</td>
+                <td>{% if image.imageFile is not empty %}
+                        <img class="mt-3" src="{{ vich_uploader_asset(image,'imageFile') }}" width="150">
+                    {% endif %}</td>
 
                 <td>
                     <div class="text-end">
