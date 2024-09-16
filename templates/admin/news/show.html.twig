@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}News{% endblock %}
+
+{% block body %}
+    <h1>News</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ news.id }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ news.category }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ news.status }}</td>
+            </tr>
+            <tr>
+                <th>Highlighted</th>
+                <td>{{ news.highlighted }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ news.date ? news.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ news.title }}</td>
+            </tr>
+            <tr>
+                <th>ShortDescription</th>
+                <td>{{ news.shortDescription }}</td>
+            </tr>
+            <tr>
+                <th>YoutueVideoCode</th>
+                <td>{{ news.youtueVideoCode }}</td>
+            </tr>
+            <tr>
+                <th>FullDesxription</th>
+                <td>{{ news.fullDesxription }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ news.image }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_news_index') }}">back to list</a>
+
+    <a href="{{ path('app_admin_news_edit', {'id': news.id}) }}">edit</a>
+
+    {{ include('admin/news/_delete_form.html.twig') }}
+{% endblock %}
