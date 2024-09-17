@@ -26,9 +26,21 @@
 
         <script>
             function ativarModoEscuro() {
+                if (document.documentElement.classList.contains('light')) {
+                    document.documentElement.classList.remove('light');
+                }
                 document.documentElement.classList.add('dark');
             }
+
+            function ativarModoClaro() {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                }
+                document.documentElement.classList.add('light');
+            }
         </script>
+
+
 
     {% endblock %}
 </head>
@@ -46,6 +58,7 @@
         <button class="btn-close d-lg-none" type="button" data-coreui-dismiss="offcanvas" data-coreui-theme="dark"
                 aria-label="Close"
                 onclick="coreui.Sidebar.getInstance(document.querySelector(&quot;#sidebar&quot;)).toggle()"></button>
+
     </div>
     <ul class="sidebar-nav simplebar-scrollable-y" data-coreui="navigation" data-simplebar="init">
         <div class="simplebar-wrapper" style="margin: -8px;">
@@ -341,7 +354,7 @@
                     <ul class="dropdown-menu dropdown-menu-end" style="--cui-dropdown-min-width: 8rem;">
                         <li>
                             <button class="dropdown-item d-flex align-items-center active" type="button"
-                                    data-coreui-theme-value="light">
+                                    data-coreui-theme-value="light" onclick="ativarModoClaro()">
                                 <svg class="icon icon-lg me-3">
                                     <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-sun"></use>
                                 </svg>
@@ -350,7 +363,7 @@
                         </li>
                         <li>
                             <button class="dropdown-item d-flex align-items-center" type="button"
-                                    data-coreui-theme-value="dark">
+                                    data-coreui-theme-value="dark" onclick="ativarModoEscuro()">
                                 <svg class="icon icon-lg me-3">
                                     <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-moon"></use>
                                 </svg>
@@ -438,7 +451,7 @@
         <div class="container-fluid px-4">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb my-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a>
+                    <li class="breadcrumb-item"><a href="{{ path("App\\Controller\\Admin\\DashboardController::index") }}">Home</a>
                     </li>
                     <li class="breadcrumb-item active"><span>Dashboard</span>
                     </li>
