@@ -1,4 +1,4 @@
-<html lang="en" data-coreui-theme="light" >
+<html lang="en" data-coreui-theme="light">
 <head>
 
     <meta charset="utf-8">
@@ -37,7 +37,27 @@
                     document.documentElement.classList.remove('dark');
                 }
                 document.documentElement.classList.add('light');
+                document.documentElement('light');
             }
+
+
+            function mostrarTema() {
+                // Obtém o valor do atributo data-coreui-theme no elemento <html>
+                const themeValue = document.documentElement.getAttribute('data-coreui-theme');
+                alert('O tema atual é: ' + themeValue);
+            }
+
+            function temaInicial() {
+                // Obtém o valor do atributo data-coreui-theme no elemento <html>
+                const themeValue = document.documentElement.getAttribute('data-coreui-theme');
+                if(themeValue=='light'){
+                    ativarModoClaro();
+                }else if(themeValue=='dark'){
+                    ativarModoEscuro();
+                }
+            }
+            document.addEventListener('DOMContentLoaded', temaInicial);
+
         </script>
 
 
@@ -372,7 +392,7 @@
                         </li>
                         <li>
                             <button class="dropdown-item d-flex align-items-center" type="button"
-                                    data-coreui-theme-value="auto">
+                                    data-coreui-theme-value="auto" onclick="mostrarTema()">
                                 <svg class="icon icon-lg me-3">
                                     <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-contrast"></use>
                                 </svg>
