@@ -1,24 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base_index.html.twig' %}
 
 {% block title %}Hello DashboardController!{% endblock %}
 
 {% block javascripts %}
 
-<script>
-    function ativarModoEscuro() {
-        if (document.documentElement.classList.contains('light')) {
-            document.documentElement.classList.remove('light');
-        }
-        document.documentElement.classList.add('dark');
-    }
-
-    function ativarModoClaro() {
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark');
-        }
-        document.documentElement.classList.add('light');
-    }
-</script>
+{{ parent() }}
 {% endblock %}
 
 {% block body %}
