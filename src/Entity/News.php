@@ -41,7 +41,7 @@ class News
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $fullDesxription = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
 
     #[Vich\UploadableField(mapping: 'image', fileNameProperty: 'image')]
@@ -156,7 +156,7 @@ class News
         return $this->image;
     }
 
-    public function setImage(string $image): static
+    public function setImage(?string $image): static
     {
         $this->image = $image;
 

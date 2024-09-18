@@ -57,6 +57,10 @@ final class ImageController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if ($image->getImageFile()) {
+                $image->setImage(""); // Linha adicionada para corrigir o erro 'Expected argument of type "string", "null" given at property path "image".'
+            }
+            $image->setImage(''); // Linha adicionada para corrigir o erro 'Expected argument of type "string", "null" given at property path "image".'
             $entityManager->flush();
 
             return $this->redirectToRoute('app_admin_image_index', [], Response::HTTP_SEE_OTHER);

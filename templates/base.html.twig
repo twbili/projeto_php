@@ -37,23 +37,22 @@
                     document.documentElement.classList.remove('dark');
                 }
                 document.documentElement.classList.add('light');
-                document.documentElement('light');
             }
 
 
             function mostrarTema() {
-                // Obtém o valor do atributo data-coreui-theme no elemento <html>
                 const themeValue = document.documentElement.getAttribute('data-coreui-theme');
                 alert('O tema atual é: ' + themeValue);
             }
 
             function temaInicial() {
-                // Obtém o valor do atributo data-coreui-theme no elemento <html>
                 const themeValue = document.documentElement.getAttribute('data-coreui-theme');
                 if(themeValue=='light'){
                     ativarModoClaro();
                 }else if(themeValue=='dark'){
                     ativarModoEscuro();
+                }else{
+                    ativarModoClaro();
                 }
             }
             document.addEventListener('DOMContentLoaded', temaInicial);

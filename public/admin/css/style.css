@@ -3164,7 +3164,7 @@ textarea.form-control-lg {
 }
 
 .btn-success {
-  --cui-btn-color: #FFFFFF ;
+  --cui-btn-color: #ffffff;
   --cui-btn-bg: #1b9e3e;
   --cui-btn-border-color: #1b9e3e;
   --cui-btn-hover-color: #080a0c;
@@ -8410,7 +8410,7 @@ textarea.form-control-lg {
 }
 
 .text-bg-success {
-  color: #080a0c !important;
+  color: #ffffff !important;
   background-color: RGBA(var(--cui-success-rgb), var(--cui-bg-opacity, 1)) !important;
 }
 
@@ -8425,7 +8425,7 @@ textarea.form-control-lg {
 }
 
 .text-bg-danger {
-  color: #080a0c !important;
+  color: #ffffff !important;
   background-color: RGBA(var(--cui-danger-rgb), var(--cui-bg-opacity, 1)) !important;
 }
 
@@ -8448,7 +8448,7 @@ textarea.form-control-lg {
   background-color: RGBA(107, 119, 133, var(--cui-bg-opacity, 1)) !important;
 }
 [data-coreui-theme=dark] .text-bg-success {
-  color: #080a0c !important;
+  color: #ffffff !important;
   background-color: RGBA(36, 149, 66, var(--cui-bg-opacity, 1)) !important;
 }
 [data-coreui-theme=dark] .text-bg-info {
@@ -8460,7 +8460,7 @@ textarea.form-control-lg {
   background-color: RGBA(237, 173, 33, var(--cui-bg-opacity, 1)) !important;
 }
 [data-coreui-theme=dark] .text-bg-danger {
-  color: #080a0c !important;
+  color: #ffffff !important;
   background-color: RGBA(219, 93, 93, var(--cui-bg-opacity, 1)) !important;
 }
 [data-coreui-theme=dark] .text-bg-light {

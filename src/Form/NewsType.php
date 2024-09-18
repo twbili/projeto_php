@@ -37,7 +37,7 @@ class NewsType extends AbstractType
             ->add('fullDesxription')
             ->add('imageFile', VichFileType::class, [
                 'required' => false,
-                'allow_delete' => false,
+                'allow_delete' => true,
                 'asset_helper' => false,
                 'download_uri' => false
             ]);
